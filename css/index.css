@@ -1,10 +1,31 @@
 body {
   background-color: #ECF8E0;
 }
+
+
 h1.octobutton {
   margin-top: 20px;
   width: 100px;
   height: 100px;
+}
+
+@-webkit-keyframes pulse_animation {
+  0% { -webkit-transform: scale(1); }
+  30% { -webkit-transform: scale(1); }
+  40% { -webkit-transform: scale(1.08); }
+  50% { -webkit-transform: scale(1); }
+  60% { -webkit-transform: scale(1); }
+  70% { -webkit-transform: scale(1.05); }
+  80% { -webkit-transform: scale(1); }
+  100% { -webkit-transform: scale(1); }
+}
+
+.pulse {
+  -webkit-animation-name: 'pulse_animation';
+  -webkit-animation-duration: 2000ms;
+  -webkit-transform-origin:80% 80%;
+  -webkit-animation-iteration-count: infinite;
+  -webkit-animation-timing-function: linear;
 }
 
 .form-horizontal {
@@ -13,11 +34,12 @@ h1.octobutton {
 
 .search {
   width: 40%;
-  height: 30px;
+  height: 50px;
+  font-size: 30px;
   margin-bottom: 20px;
   text-align: center;
   background-color: #CEF6F5;
-  font-color: #0B0B3B;
+  font-color: white;
 }
 
 .octobutton {
@@ -40,6 +62,13 @@ h1.octobutton {
 
 .avatar {
   opacity: 0.85;
+  background-position: 50% 50%;
+  background-repeat: no-repeat;
+  border-radius: 50%;
+  -webkit-border-radius: 50%;
+  -moz-border-radius: 50%;
+  width: 100px;
+  height: 100px;
 }
 
 
