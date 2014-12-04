@@ -1,7 +1,7 @@
 <!doctype html>
 <html lang="en" ng-app="GitUserSearch">
   <head>
-  
+
     <meta charset="utf-8" /> 
     <title>Github user search</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
@@ -16,13 +16,13 @@
   <body ng-controller='GitUserSearchController'>
     <div>
       <form class="form-horizontal">
-        <input type="text">
-        <button class="btn">Search</button>
+        <input type="text" ng-model="searchTerm" ng-change="doSearch()">
+        <button class="btn" ng-click="doSearch()">Search</button>
       </form>
-      <ul class="list-group">
+      <ul class="list-group" ng-repeat="user in searchResult.items">
         <li class="list-group-item">
-          <img ng-src= "{{ user.avatar_url }}">
-          <a href="https://github.com/ctrembath">claretrembath</a>
+          <img ng-src= "{{ user.avatar_url }}&s=50">
+           <a href="{{user.html_url}}">{{user.login}}</a>
         </li>
       </ul>
     </div>
