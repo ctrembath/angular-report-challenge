@@ -13,18 +13,21 @@
 
   </head>
 
-  <body ng-controller='GitUserSearchController'>
+  <body ng-controller='GitUserSearchController'> 
+  <center>
     <div>
       <form class="form-horizontal">
         <input type="text" ng-model="searchTerm" ng-change="doSearch()">
-        <button class="btn" ng-click="doSearch()">Search</button>
+
+        <button class="btn btn-primary btn-lg" ng-click="doSearch()">Search</button>
       </form>
       <ul class="list-group" ng-repeat="user in searchResult.items">
         <li class="list-group-item">
-          <img ng-src= "{{ user.avatar_url }}&s=50">
+          <img ng-src= "{{ user.avatar_url }}" width="75" height="75">
            <a href="{{user.html_url}}">{{user.login}}</a>
         </li>
       </ul>
     </div>
+    </center>
   </body>
 </html>
