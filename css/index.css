@@ -1,5 +1,5 @@
 body {
-  background-color: #ECF8E0;
+  background-color: #67B0FF;
 }
 
 
@@ -38,8 +38,8 @@ h1.octobutton {
   font-size: 30px;
   margin-bottom: 20px;
   text-align: center;
-  background-color: #CEF6F5;
-  font-color: white;
+  background-color: #FFD4A7;
+  font: #453ECC;
 }
 
 .octobutton {
@@ -50,9 +50,11 @@ h1.octobutton {
 .list-group-item{
   margin-top: 40px;
   width: 50%;
-  background-color: #CEF6F5;
+  background-color: #FFD4A7;
+  opacity: 0.85;
   border-style: solid;
-  border-width: 2px;
+  border-width: 10px;
+  border-color: #CC613E;
   font-family: sans-serif;
 }
 .login {
