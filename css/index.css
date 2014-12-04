@@ -1,0 +1,47 @@
+body {
+  background-color: #ECF8E0;
+}
+h1.octobutton {
+  margin-top: 20px;
+  width: 100px;
+  height: 100px;
+}
+
+.form-horizontal {
+  margin-top: 20px;
+}
+
+.search {
+  width: 40%;
+  height: 30px;
+  margin-bottom: 20px;
+  text-align: center;
+  background-color: #CEF6F5;
+  font-color: #0B0B3B;
+}
+
+.octobutton {
+  width: 100px;
+  height: 100px;
+}
+
+.list-group-item{
+  margin-top: 40px;
+  width: 50%;
+  background-color: #CEF6F5;
+  border-style: solid;
+  border-width: 2px;
+  font-family: sans-serif;
+}
+.login {
+  font-size:30px;
+  opacity: 0.85;
+}
+
+.avatar {
+  opacity: 0.85;
+}
+
+
+
+
