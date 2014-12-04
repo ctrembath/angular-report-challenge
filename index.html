@@ -21,7 +21,7 @@
       </form>
       <ul class="list-group" ng-repeat="user in searchResult.items">
         <li class="list-group-item">
-          <img ng-src= "{{ user.avatar_url }}&s=50">
+          <img ng-src= "{{ user.avatar_url }}" width="75" height="75">
            <a href="{{user.html_url}}">{{user.login}}</a>
         </li>
       </ul>
