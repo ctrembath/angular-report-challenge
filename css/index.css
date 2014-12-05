@@ -3,12 +3,6 @@ body {
 }
 
 
-h1.octobutton {
-  margin-top: 20px;
-  width: 100px;
-  height: 100px;
-}
-
 @-webkit-keyframes pulse_animation {
   0% { -webkit-transform: scale(1); }
   30% { -webkit-transform: scale(1); }
@@ -43,6 +37,7 @@ h1.octobutton {
 }
 
 .octobutton {
+  margin-top: 30px;
   width: 100px;
   height: 100px;
 }
