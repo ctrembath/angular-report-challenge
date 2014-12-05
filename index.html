@@ -1,40 +1,59 @@
 <!doctype html>
 <html lang="en" ng-app="GitUserSearch">
   <head>
-
-    <meta charset="utf-8" /> 
+   <meta charset="utf-8" /> 
     <title>Github user search</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/index.css">
-
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
     <script src="js/app.js"></script>
     <script src="js/gitUserSearchController.js"></script>
-
-
   </head>
-
-  <body ng-controller='GitUserSearchController'> 
-  <center>
+  <body ng-controller='GitUserSearchController'>
+    <center>
   <h1><img class="octobutton pulse" src="./images/octocat.png"></h1>
-
     <div>
-      <form class="form-horizontal">
-        <input type="text" class="search" ng-model="searchTerm" ng-change="doSearch()" placeholder="github username">
+     <form class="form-horizontal">
+        <input type="text" class= "search"  ng-model="searchTerm" ng-change="doSearch()" placeholder= "github username">
         <br>
-
-      <ul class="list-group" ng-repeat="user in searchResult.items">
+        <!-- For Clare, I have removed the useless button just not to get confused -->
+      </form>
+      <ul class="list-group" ng-repeat="user in searchResults.items">
         <li class="list-group-item">
-        <a class="login" href="{{user.html_url}}">{{user.login}}</a>
-        <br>
-
           <img class="avatar" ng-src= "{{ user.avatar_url }}" width="80" height="80">
-         
+          <br>
+           <a class="login" href="{{user.html_url}}">{{user.login}}</a>
+           <br>
+           <div class="score">
+           score:
+           <br>
+            {{user.score}}
+           </div>
+           </br>
         </li>
       </ul>
     </div>
+    
+
+     <ul class="list-group" ng-repeat="repo in repoResults">
+
+      <li class="list-group-item">   
+           <a href="{{repo.zxhtml_url}}">
+            <div class= "repo_name">
+              <h3>repo name</h3>
+                {{ repo.name }}</a>
+                <br>
+                </div>
+            <div class="repo_language">
+              language
+                <br>
+              {{ repo.language }}
+            </div>
+      </li>
+    </ul>
     </center>
   </body>
 </html>
