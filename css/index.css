@@ -9,6 +9,7 @@ h1.octobutton {
   height: 100px;
 }
 
+
 @-webkit-keyframes pulse_animation {
   0% { -webkit-transform: scale(1); }
   30% { -webkit-transform: scale(1); }
@@ -43,6 +44,9 @@ h1.octobutton {
 }
 
 .octobutton {
+
+  margin-top: 20px;
+
   width: 100px;
   height: 100px;
 }
@@ -55,7 +59,9 @@ h1.octobutton {
   border-style: solid;
   border-width: 10px;
   border-color: #CC613E;
+
   font-family: sans-serif;
+
 }
 .login {
   font-size:30px;
@@ -71,4 +77,35 @@ h1.octobutton {
   -moz-border-radius: 50%;
   width: 100px;
   height: 100px;
+
 }
+
+}
+
+.score {
+  font-weight: 100;
+  font-size: 30px;
+  font-family: 'Roboto', sans-serif;
+  font-color: #5858FA;
+}
+
+.repo_name {
+    font-weight: 300;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
+}
+
+.repo_language {
+  font-weight: 100;
+    font-size: 25px;
+    font-family: 'Roboto', sans-serif;
+    margin-bottom: 5px;
+}
+
+
+
+
+
+
+

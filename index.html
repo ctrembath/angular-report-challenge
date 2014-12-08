@@ -5,6 +5,9 @@
     <title>Github user search</title>
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.css">
     <link rel="stylesheet" href="css/index.css">
+
+    <link href='http://fonts.googleapis.com/css?family=Roboto:400,100' rel='stylesheet' type='text/css'>
+
     <script src="bower_components/jquery/dist/jquery.js"></script>
     <script src="bower_components/angular/angular.js"></script>
     <script src="bower_components/angular-resource/angular-resource.js"></script>
@@ -13,26 +16,60 @@
   </head>
   <body ng-controller='GitUserSearchController'>
     <center>
+<<<<<<< HEAD
   <h1><img class="octobutton pulse" src="./public/octocat.png"></h1>
     <div>
      <form class="form-horizontal">
         <input type="text" ng-model="searchTerm" ng-change="doSearch()">
+
+  <h1><img class="octobutton pulse" src="./images/octocat.png"></h1>
+    <div>
+     <form class="form-horizontal">
+        <input type="text" class= "search"  ng-model="searchTerm" ng-change="doSearch()" placeholder= "github username">
+
         <br>
         <!-- For Clare, I have removed the useless button just not to get confused -->
       </form>
       <ul class="list-group" ng-repeat="user in searchResults.items">
         <li class="list-group-item">
           <img class="avatar" ng-src= "{{ user.avatar_url }}" width="80" height="80">
+
            <a class="login" href="{{user.html_url}}">{{user.login}}</a>
            Score: {{user.score}}
+
+          <br>
+           <a class="login" href="{{user.html_url}}">{{user.login}}</a>
+           <br>
+           <div class="score">
+           score:
+           <br>
+            {{user.score}}
+           </div>
+
            </br>
         </li>
       </ul>
     </div>
+
      <ul class="list-group" ng-repeat="repo in repoResults">
       <li class="list-group-item">   
            <a href="{{repo.zxhtml_url}}">{{ repo.name }}</a>
            {{ repo.language }}
+
+     <ul class="list-group" ng-repeat="repo in repoResults">
+
+      <li class="list-group-item">   
+           <a href="{{repo.zxhtml_url}}">
+            <div class= "repo_name">
+              <h3>repo name</h3>
+                {{ repo.name }}</a>
+                <br>
+                </div>
+            <div class="repo_language">
+              language
+                <br>
+              {{ repo.language }}
+            </div>
       </li>
     </ul>
     </center>
