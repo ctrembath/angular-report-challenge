@@ -3,7 +3,7 @@ GithubUserSearch.controller('GitUserSearchController', function($scope, $resourc
 
 var searchResource = $resource('https://api.github.com/search/users?access_token=');
 
-var searchResource = $resource('https://api.github.com/search/users?access_token=ff8a6e78e60868859c7a61a800aaf3cb46885725');
+var searchResource = $resource('https://api.github.com/search/users?access_token=');
 
 
 $scope.doUsers = function(){
@@ -15,7 +15,7 @@ $scope.doUsers = function(){
 
 var searchRepos = $resource('https://api.github.com/users/:q/repos?access_token=');
 
-var searchRepos = $resource('https://api.github.com/users/:q/repos?access_token=ff8a6e78e60868859c7a61a800aaf3cb46885725');
+var searchRepos = $resource('https://api.github.com/users/:q/repos?access_token=');
 
    
 $scope.doRepos = function(){
